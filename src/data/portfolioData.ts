@@ -76,7 +76,7 @@ export const personalInfo: PersonalInfo = {
   github: "https://github.com/Asem7Yousry",        // Configurable
   heroStatement: "Building backend applications, RESTful APIs, and reliable server-side systems with Node.js and modern backend technologies.",
   about: "Backend Developer with 2 years of experience developing web applications using Node.js, Express.js, and NestJS. Experienced in designing RESTful APIs and working across relational and NoSQL databases including MongoDB, PostgreSQL, and MySQL. Skilled in caching, asynchronous job processing with Redis and RabbitMQ, containerization with Docker, AWS deployment, and secure payment processing with Stripe. Collaborates effectively within Agile teams to translate business logic into dependable server-side architecture.",
-  cvUrl: "/Asem-Yousry-CV.pdf"
+  cvUrl: `${import.meta.env.BASE_URL}Asem-Yousry-CV.pdf`
 };
 
 export const coreTechnologies: string[] = [
