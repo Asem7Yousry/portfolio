@@ -1,0 +1,129 @@
+.education-section {
+  position: relative;
+  background-color: rgba(26, 29, 36, 0.4);
+}
+
+.education-card-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.education-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.edu-top-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.edu-badge-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--border-radius-md);
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.edu-info {
+  flex-grow: 1;
+}
+
+.edu-faculty {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.edu-institution-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.edu-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  margin-left: auto;
+}
+
+.edu-major-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: var(--spacing-md);
+}
+
+.edu-label {
+  font-size: 0.72rem;
+  color: var(--accent-primary);
+  letter-spacing: 0.06em;
+}
+
+.edu-major-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.88rem;
+  color: #fff;
+  width: fit-content;
+}
+
+.edu-grad-project-box {
+  background: #14171d;
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.grad-badge {
+  font-size: 0.7rem;
+  color: var(--accent-primary);
+  letter-spacing: 0.08em;
+}
+
+.grad-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.grad-desc {
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 640px) {
+  .edu-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .edu-time-badge {
+    margin-left: 0;
+  }
+}

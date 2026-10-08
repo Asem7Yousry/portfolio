@@ -1,44 +1,56 @@
 import React from 'react';
 import { personalInfo } from '../data/portfolioData';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { GithubIcon, LinkedinIcon } from './Icons';
+import './Footer.css';
+
+const CURRENT_YEAR = new Date().getFullYear();
 
 const Footer: React.FC = () => {
   return (
-    <footer style={{ 
-      borderTop: '1px solid var(--border-color)', 
-      padding: 'var(--spacing-xl) 0',
-      backgroundColor: 'var(--bg-secondary)'
-    }}>
-      <div className="container" style={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center',
-        textAlign: 'center'
-      }}>
-        <div style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: 'var(--spacing-xs)' }}>
-          {personalInfo.name}
+    <footer className="footer-root">
+      <div className="container footer-container">
+        <div className="footer-identity">
+          <div className="footer-name">{personalInfo.name}</div>
+          <div className="text-accent font-mono footer-title">
+            {personalInfo.title}
+          </div>
         </div>
-        <div className="text-accent font-mono" style={{ fontSize: '0.9rem', marginBottom: 'var(--spacing-md)' }}>
-          {personalInfo.title}
-        </div>
-        <p className="text-secondary" style={{ fontSize: '0.85rem', marginBottom: 'var(--spacing-lg)' }}>
+
+        <p className="text-secondary footer-tagline">
           Node.js · Express.js · NestJS · Backend Engineering
         </p>
         
-        <div style={{ display: 'flex', gap: 'var(--spacing-md)' }}>
-          <a href={`mailto:${personalInfo.email}`} aria-label="Email" style={{ color: 'var(--text-secondary)' }} onMouseOver={e => e.currentTarget.style.color = 'var(--accent-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
-            <Mail size={20} />
+        <div className="footer-social-links">
+          <a
+            href={`mailto:${personalInfo.email}`}
+            aria-label="Email"
+            className="footer-social-btn"
+          >
+            <Mail size={18} />
           </a>
-          <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--text-secondary)' }} onMouseOver={e => e.currentTarget.style.color = 'var(--accent-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
-            <Github size={20} />
+          <a
+            href={personalInfo.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
+            className="footer-social-btn"
+          >
+            <GithubIcon size={18} />
           </a>
-          <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ color: 'var(--text-secondary)' }} onMouseOver={e => e.currentTarget.style.color = 'var(--accent-primary)'} onMouseOut={e => e.currentTarget.style.color = 'var(--text-secondary)'}>
-            <Linkedin size={20} />
+          <a
+            href={personalInfo.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+            className="footer-social-btn"
+          >
+            <LinkedinIcon size={18} />
           </a>
         </div>
         
-        <div style={{ marginTop: 'var(--spacing-xl)', fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-          &copy; {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
+        <div className="footer-copyright font-mono">
+          &copy; {CURRENT_YEAR} {personalInfo.name} · All rights reserved.
         </div>
       </div>
     </footer>

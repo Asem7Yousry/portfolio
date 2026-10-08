@@ -1,40 +1,54 @@
 import React from 'react';
 import { education } from '../data/portfolioData';
-import { GraduationCap } from 'lucide-react';
+import { GraduationCap, BookOpen, Calendar, MapPin } from 'lucide-react';
+import './Education.css';
 
 const Education: React.FC = () => {
   return (
-    <section id="education" className="section bg-tertiary-subtle">
+    <section id="education" className="section education-section">
       <div className="container">
-        <h2>Education</h2>
+        <div className="section-header">
+          <span className="section-kicker font-mono">06 // ACADEMICS</span>
+          <h2>Education</h2>
+          <p className="section-subtitle text-secondary">
+            Formal foundations in software engineering and web application development.
+          </p>
+        </div>
         
-        <div className="grid grid-cols-1 gap-lg" style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <div className="education-card-wrapper">
           {education.map((edu, idx) => (
-            <div key={idx} className="card">
-              <div className="flex items-center gap-md mb-md">
-                <div style={{ padding: '12px', background: 'rgba(74, 222, 128, 0.1)', borderRadius: '50%', color: 'var(--accent-primary)' }}>
-                  <GraduationCap size={28} />
+            <div key={idx} className="card education-card">
+              <div className="edu-top-row">
+                <div className="edu-badge-icon">
+                  <GraduationCap size={28} className="text-accent" />
                 </div>
-                <div>
-                  <h3 style={{ marginBottom: '4px' }}>{edu.faculty}</h3>
-                  <div className="text-secondary">{edu.institution}</div>
+                <div className="edu-info">
+                  <h3 className="edu-faculty">{edu.faculty}</h3>
+                  <div className="edu-institution-row font-mono text-secondary">
+                    <span className="text-primary font-bold">{edu.institution}</span>
+                    <span>·</span>
+                    <span><MapPin size={12} className="inline mr-1" /> Cairo, Egypt</span>
+                  </div>
                 </div>
-                <div className="badge" style={{ marginLeft: 'auto' }}>{edu.timeline}</div>
+                <div className="badge edu-time-badge font-mono">
+                  <Calendar size={13} />
+                  <span>{edu.timeline}</span>
+                </div>
               </div>
               
-              <div style={{ marginTop: 'var(--spacing-md)' }}>
-                <div className="font-mono text-accent" style={{ marginBottom: 'var(--spacing-xs)', fontSize: '0.9rem' }}>
-                  MAJOR
+              <div className="edu-major-section">
+                <div className="edu-label font-mono">MAJOR FIELD OF STUDY:</div>
+                <div className="edu-major-pill font-mono">
+                  <BookOpen size={15} className="text-accent" />
+                  <span>{edu.major}</span>
                 </div>
-                <p>{edu.major}</p>
               </div>
 
               {edu.graduationProject && (
-                <div style={{ marginTop: 'var(--spacing-lg)', borderTop: '1px solid var(--border-color)', paddingTop: 'var(--spacing-md)' }}>
-                  <div className="font-mono text-accent" style={{ marginBottom: 'var(--spacing-xs)', fontSize: '0.9rem' }}>
-                    GRADUATION PROJECT: {edu.graduationProject.name.toUpperCase()}
-                  </div>
-                  <p className="text-secondary" style={{ fontSize: '0.95rem' }}>
+                <div className="edu-grad-project-box">
+                  <div className="grad-badge font-mono">GRADUATION PROJECT</div>
+                  <h4 className="grad-title">{edu.graduationProject.name}</h4>
+                  <p className="grad-desc text-secondary">
                     {edu.graduationProject.description}
                   </p>
                 </div>

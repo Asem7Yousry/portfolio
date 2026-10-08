@@ -1,0 +1,118 @@
+.about-section {
+  position: relative;
+  background-color: rgba(26, 29, 36, 0.4);
+}
+
+.section-header {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.section-kicker {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--accent-primary);
+  margin-bottom: 0.25rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+.about-bio-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about-heading {
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.about-text {
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.about-highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin-top: 0.75rem;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.about-highlight-item {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.highlight-icon-wrapper {
+  padding: 0.5rem;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+}
+
+.highlight-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: #fff;
+}
+
+.highlight-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.about-meta-card {
+  background: #14171d;
+  border-left: 2px solid var(--accent-primary);
+}
+
+.meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 0.82rem;
+}
+
+.meta-key {
+  color: var(--text-secondary);
+}
+
+.meta-val {
+  color: #fff;
+  font-weight: 500;
+  text-align: right;
+}
+
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
