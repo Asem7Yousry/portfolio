@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Mail, FileDown } from 'lucide-react';
+import { Menu, X, Mail, FileDown, Sun, Moon } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon } from './Icons';
+import { useTheme } from '../hooks/useTheme';
 import './Navigation.css';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,6 +55,19 @@ const Navigation: React.FC = () => {
           </ul>
 
           <div className="navbar-actions">
+            <button
+              onClick={toggleTheme}
+              className="theme-toggle-btn"
+              title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} mode`}
+              aria-label={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} mode`}
+            >
+              {theme === 'dark' ? (
+                <Sun size={18} className="theme-icon sun-icon" />
+              ) : (
+                <Moon size={18} className="theme-icon moon-icon" />
+              )}
+            </button>
+
             <div className="navbar-social">
               <a
                 href={personalInfo.github}
@@ -95,15 +110,30 @@ const Navigation: React.FC = () => {
           </div>
         </nav>
 
-        {/* Mobile Toggle */}
-        <button
-          className="navbar-mobile-toggle"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={isMobileMenuOpen}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Controls */}
+        <div className="mobile-nav-actions">
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle-btn mobile-theme-btn"
+            title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} mode`}
+            aria-label={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} mode`}
+          >
+            {theme === 'dark' ? (
+              <Sun size={18} className="theme-icon sun-icon" />
+            ) : (
+              <Moon size={18} className="theme-icon moon-icon" />
+            )}
+          </button>
+
+          <button
+            className="navbar-mobile-toggle"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMobileMenuOpen}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer */}

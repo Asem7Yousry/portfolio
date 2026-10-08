@@ -1,18 +1,6 @@
 .about-section {
   position: relative;
-  background-color: rgba(26, 29, 36, 0.4);
-}
-
-.section-header {
-  margin-bottom: var(--spacing-2xl);
-}
-
-.section-kicker {
-  display: block;
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  color: var(--accent-primary);
-  margin-bottom: 0.25rem;
+  background-color: var(--bg-subtle);
 }
 
 .about-grid {
@@ -32,7 +20,7 @@
   font-size: 1.35rem;
   font-weight: 600;
   line-height: 1.4;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .about-text {
@@ -46,7 +34,7 @@
   gap: var(--spacing-lg);
   margin-top: 0.75rem;
   padding-top: var(--spacing-lg);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .about-highlight-item {
@@ -56,8 +44,8 @@
 
 .highlight-icon-wrapper {
   padding: 0.5rem;
-  background: rgba(74, 222, 128, 0.08);
-  border: 1px solid rgba(74, 222, 128, 0.2);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
   border-radius: var(--border-radius-sm);
   display: flex;
   align-items: center;
@@ -69,7 +57,7 @@
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 0.2rem;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .highlight-desc {
@@ -78,8 +66,9 @@
 }
 
 .about-meta-card {
-  background: #14171d;
-  border-left: 2px solid var(--accent-primary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-primary);
 }
 
 .meta-list {
@@ -93,7 +82,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 0.6rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--border-subtle);
   font-size: 0.82rem;
 }
 
@@ -102,7 +91,7 @@
 }
 
 .meta-val {
-  color: #fff;
+  color: var(--text-primary);
   font-weight: 500;
   text-align: right;
 }

@@ -16,7 +16,7 @@
 .contact-name {
   font-size: 2rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--text-primary);
   margin-bottom: 0.15rem;
 }
 
@@ -45,19 +45,21 @@
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-md);
   position: relative;
-  transition: border-color var(--transition-fast);
+  box-shadow: var(--card-shadow);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
 .contact-item:hover {
-  border-color: rgba(74, 222, 128, 0.4);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
 }
 
 .contact-icon-wrapper {
   width: 40px;
   height: 40px;
   border-radius: var(--border-radius-sm);
-  background: rgba(74, 222, 128, 0.08);
-  border: 1px solid rgba(74, 222, 128, 0.2);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +73,7 @@
 .contact-value {
   font-size: 0.95rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .email-link:hover {
@@ -89,10 +91,11 @@
   padding: 0.3rem 0.6rem;
   border-radius: var(--border-radius-sm);
   transition: all var(--transition-fast);
+  cursor: pointer;
 }
 
 .copy-btn:hover {
-  color: #fff;
+  color: var(--text-primary);
   border-color: var(--accent-primary);
 }
 
@@ -102,15 +105,15 @@
 
 /* Terminal Visual */
 .terminal-window {
-  background: #14171d;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-md);
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--card-shadow);
 }
 
 .terminal-header {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--bg-tertiary);
   padding: 0.65rem 1rem;
   display: flex;
   align-items: center;
@@ -141,16 +144,16 @@
 .terminal-body {
   padding: 1.25rem;
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
 .term-output {
-  color: #cbd5e1;
+  color: var(--text-secondary);
 }
 
 .term-highlight {
-  color: #fff;
+  color: var(--text-primary);
   font-weight: 600;
 }
 

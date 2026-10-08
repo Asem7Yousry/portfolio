@@ -16,8 +16,8 @@
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(rgba(74, 222, 128, 0.04) 1px, transparent 1px),
-    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    radial-gradient(var(--accent-glow) 1px, transparent 1px),
+    linear-gradient(to right, var(--border-subtle) 1px, transparent 1px);
   background-size: 32px 32px;
   z-index: -1;
   pointer-events: none;
@@ -61,7 +61,7 @@
   line-height: 1.08;
   letter-spacing: -0.03em;
   margin-bottom: 0.25rem;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .hero-subtitle {
@@ -77,7 +77,7 @@
   line-height: 1.7;
   max-width: 580px;
   margin-bottom: var(--spacing-xl);
-  color: #a0aec0;
+  color: var(--text-secondary);
 }
 
 .hero-tech-stack-wrapper {
@@ -100,9 +100,9 @@
 
 .tech-item {
   font-size: 0.8rem;
-  color: #e2e8f0;
+  color: var(--text-primary);
   padding: 0.28rem 0.65rem;
-  background: rgba(37, 42, 52, 0.6);
+  background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-sm);
   transition: all var(--transition-fast);
@@ -111,7 +111,7 @@
 .tech-item:hover {
   border-color: var(--accent-primary);
   color: var(--accent-primary);
-  background: rgba(74, 222, 128, 0.05);
+  background: var(--accent-subtle);
 }
 
 .hero-actions {
@@ -126,7 +126,7 @@
   align-items: center;
   gap: 1.25rem;
   padding-top: var(--spacing-md);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .hero-social-link {
@@ -151,13 +151,13 @@
 }
 
 .architecture-diagram {
-  background: #14171d;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-lg);
   width: 100%;
   max-width: 480px;
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--card-shadow);
 }
 
 .arch-header {
@@ -165,7 +165,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--bg-tertiary);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -214,6 +214,7 @@
   text-align: center;
   position: relative;
   transition: border-color var(--transition-fast);
+  color: var(--text-primary);
 }
 
 .arch-tag {
@@ -223,21 +224,21 @@
 }
 
 .arch-client {
-  background: #181c24;
-  border-color: rgba(255, 255, 255, 0.08);
+  background: var(--bg-tertiary);
+  border-color: var(--border-color);
 }
 
 .arch-api {
-  border-color: rgba(74, 222, 128, 0.3);
-  background: rgba(74, 222, 128, 0.04);
-  color: #fff;
+  border-color: var(--accent-border);
+  background: var(--accent-subtle);
+  color: var(--text-primary);
 }
 
 .arch-backend {
   border-color: var(--accent-primary);
-  background: rgba(74, 222, 128, 0.08);
-  color: #fff;
-  box-shadow: 0 0 20px rgba(74, 222, 128, 0.08);
+  background: var(--accent-subtle);
+  color: var(--text-primary);
+  box-shadow: 0 0 20px var(--accent-glow);
 }
 
 .arch-stream-line {
@@ -252,7 +253,7 @@
 
 .stream-pipe {
   font-family: var(--font-mono);
-  color: rgba(255, 255, 255, 0.15);
+  color: var(--border-color);
   font-size: 0.75rem;
   line-height: 1;
 }
@@ -260,7 +261,7 @@
 .stream-badge {
   font-size: 0.65rem;
   color: var(--accent-primary);
-  background: rgba(74, 222, 128, 0.1);
+  background: var(--accent-subtle);
   padding: 0.1rem 0.4rem;
   border-radius: 4px;
   margin: 0.15rem 0;
@@ -299,7 +300,7 @@
 .subnode-title {
   font-size: 0.78rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .subnode-sub {
@@ -310,7 +311,7 @@
 .arch-footer {
   margin-top: 0.85rem;
   padding-top: 0.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--border-subtle);
   width: 100%;
   display: flex;
   align-items: center;

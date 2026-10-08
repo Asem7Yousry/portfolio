@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeProvider } from './context/ThemeContext';
 import Navigation from './components/Navigation';
 import './App.css';
 import Hero from './sections/Hero';
@@ -13,20 +14,22 @@ import Footer from './components/Footer';
 
 export const App: React.FC = () => {
   return (
-    <div className="app-layout">
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <EngineeringFocus />
-        <Projects />
-        <Experience />
-        <Skills />
-        <Education />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="app-layout">
+        <Navigation />
+        <main>
+          <Hero />
+          <About />
+          <EngineeringFocus />
+          <Projects />
+          <Experience />
+          <Skills />
+          <Education />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 
