@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Mail, FileDown, Sun, Moon } from 'lucide-react';
+import { Menu, X, Mail, Sun, Moon } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { useTheme } from '../hooks/useTheme';
@@ -96,17 +96,6 @@ const Navigation: React.FC = () => {
               </a>
             </div>
 
-            {personalInfo.cvUrl && (
-              <a
-                href={personalInfo.cvUrl}
-                download
-                className="btn btn-cv-nav font-mono"
-                title="Download CV"
-              >
-                <FileDown size={15} />
-                <span>CV</span>
-              </a>
-            )}
           </div>
         </nav>
 
@@ -182,16 +171,6 @@ const Navigation: React.FC = () => {
               </a>
             </div>
 
-            {personalInfo.cvUrl && (
-              <a
-                href={personalInfo.cvUrl}
-                download
-                className="btn btn-secondary font-mono"
-                style={{ width: '100%', justifyContent: 'center' }}
-              >
-                <FileDown size={16} /> Download CV
-              </a>
-            )}
           </div>
         </div>
       )}

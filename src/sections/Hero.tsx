@@ -1,7 +1,8 @@
 import React from 'react';
-import { ArrowRight, Terminal } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { personalInfo, coreTechnologies } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon } from '../components/Icons';
+import profileImg from '../assets/img.jpeg';
 import './Hero.css';
 
 const Hero: React.FC = () => {
@@ -81,75 +82,10 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="hero-visual animate-fade-in" style={{ animationDelay: '0.35s' }}>
-          <div className="architecture-diagram">
-            <div className="arch-header">
-              <div className="arch-dots">
-                <span className="dot dot-red"></span>
-                <span className="dot dot-yellow"></span>
-                <span className="dot dot-green"></span>
-              </div>
-              <div className="arch-title font-mono">
-                <Terminal size={14} className="text-accent" />
-                <span>ARCH_TOPOLOGY.sys</span>
-              </div>
-            </div>
-
-            <div className="arch-body">
-              <div className="arch-node arch-client">
-                <span className="arch-tag font-mono">REQUEST</span>
-                <span>Client (Web / Mobile)</span>
-              </div>
-              
-              <div className="arch-stream-line">
-                <span className="stream-pipe">│</span>
-                <span className="stream-badge font-mono">HTTP / REST</span>
-                <span className="stream-arrow">↓</span>
-              </div>
-
-              <div className="arch-node arch-api">
-                <span className="arch-tag font-mono">GATEWAY / ROUTING</span>
-                <span>REST API Layer</span>
-              </div>
-
-              <div className="arch-stream-line">
-                <span className="stream-pipe">│</span>
-                <span className="stream-badge font-mono">DISPATCH</span>
-                <span className="stream-arrow">↓</span>
-              </div>
-
-              <div className="arch-node arch-backend">
-                <span className="arch-tag font-mono">CORE RUNTIME</span>
-                <span className="font-bold">Backend Application (Node.js)</span>
-              </div>
-
-              <div className="arch-stream-line">
-                <span className="stream-pipe">┌───────────────┼───────────────┐</span>
-                <span className="stream-arrow">↓               ↓               ↓</span>
-              </div>
-
-              <div className="arch-row">
-                <div className="arch-subnode arch-db">
-                  <span className="subnode-title font-mono">MongoDB</span>
-                  <span className="subnode-sub font-mono">Data Store</span>
-                </div>
-                <div className="arch-subnode arch-cache">
-                  <span className="subnode-title font-mono">Redis</span>
-                  <span className="subnode-sub font-mono">Caching / TTL</span>
-                </div>
-                <div className="arch-subnode arch-mq">
-                  <span className="subnode-title font-mono">RabbitMQ</span>
-                  <span className="subnode-sub font-mono">Message Broker</span>
-                </div>
-              </div>
-
-              <div className="arch-footer font-mono">
-                <span className="status-ping"></span>
-                <span>System Pipeline Active · Event-Driven Architecture</span>
-              </div>
-            </div>
+          <div className="hero-image-frame">
+            <img src={profileImg} alt={personalInfo.name} className="hero-image" />
           </div>
         </div>
-
       </div>
     </section>
   );

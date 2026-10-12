@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { personalInfo } from '../data/portfolioData';
-import { Mail, FileText, Phone, MapPin, Copy, Check } from 'lucide-react';
+import { Mail, Phone, MapPin, Copy, Check } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../components/Icons';
 import './Contact.css';
 
@@ -82,16 +82,6 @@ const Contact: React.FC = () => {
             </div>
             
             <div className="mt-xl flex gap-md flex-wrap contact-action-row">
-              {personalInfo.cvUrl && (
-                <a 
-                  href={personalInfo.cvUrl} 
-                  download 
-                  className="btn btn-primary font-mono"
-                  title="Download Curriculum Vitae"
-                >
-                  <FileText size={17} /> Download CV
-                </a>
-              )}
               <a 
                 href={personalInfo.github} 
                 target="_blank" 
